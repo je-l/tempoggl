@@ -1,0 +1,30 @@
+[
+  {
+    "expand": "description,lead,url,projectKeys",
+    "self": "https://jira.example.com",
+    "id": "1234",
+    "key": "PROJ",
+    "name": "Projekti project",
+    "avatarUrls": {
+      "48x48": "https://jira.example.com",
+      "24x24": "https://jira.example.com",
+      "16x16": "https://jira.example.com",
+      "32x32": "https://jira.example.com"
+    },
+    "projectTypeKey": "software"
+  },
+  {
+    "expand": "description,lead,url,projectKeys",
+    "self": "https://jira.example.com",
+    "id": "808",
+    "key": "TUN",
+    "name": "Floor jack project",
+    "avatarUrls": {
+      "48x48": "https://jira.example.com",
+      "24x24": "https://jira.example.com",
+      "16x16": "https://jira.example.com",
+      "32x32": "https://jira.example.com"
+    },
+    "projectTypeKey": "software"
+  }
+]

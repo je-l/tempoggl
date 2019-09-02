@@ -1,0 +1,10 @@
+# pip-compile consumes this file
+
+flake8
+flake8-bugbear
+flake8-comprehensions
+flake8-quotes
+flake8-docstrings
+black
+pytest
+pytest-cov

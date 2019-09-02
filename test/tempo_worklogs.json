@@ -1,0 +1,64 @@
+[
+  {
+    "timeSpentSeconds": 12345,
+    "dateStarted": "2019-03-12T00:00:00.000",
+    "dateCreated": "2019-03-20T18:59:19.000",
+    "dateUpdated": "2019-03-20T18:59:19.000",
+    "comment": "Working on issue PROJ-711",
+    "self": "https://jira.example.com/rest/api/2/tempo-timesheets/3/worklogs/12345",
+    "id": 12345,
+    "jiraWorklogId": 12345,
+    "author": {
+      "self": "https://jira.example.com/rest/api/2/user?username=user@example.com",
+      "name": "user@example.com",
+      "key": "user@example.com",
+      "displayName": "User Example",
+      "avatar": "https://jira.example.com/secure/useravatar?size=small&ownerId=example.user%40example.com&avatarId=12345"
+    },
+    "issue": {
+      "self": "https://jira.example.com/rest/api/2/issue/30122",
+      "id": 12345,
+      "projectId": 1234,
+      "key": "PROJ-711",
+      "remainingEstimateSeconds": 12345,
+      "issueType": {
+        "name": "Bug",
+        "iconUrl": "https://jira.example.com/secure/viewavatar?size=xsmall&avatarId=12345&avatarType=issuetype"
+      },
+      "summary": "lorem ipsum"
+    },
+    "worklogAttributes": [],
+    "workAttributeValues": []
+  },
+  {
+    "timeSpentSeconds": 12345,
+    "dateStarted": "2019-03-13T00:00:00.000",
+    "dateCreated": "2019-03-20T19:00:12.000",
+    "dateUpdated": "2019-03-20T19:00:12.000",
+    "comment": "doing some work",
+    "self": "https://jira.example.com/rest/api/2/tempo-timesheets/3/worklogs/12345",
+    "id": 12345,
+    "jiraWorklogId": 12345,
+    "author": {
+      "self": "https://jira.example.com/rest/api/2/user?username=user@example.com",
+      "name": "user@example.com",
+      "key": "user@example.com",
+      "displayName": "User Example",
+      "avatar": "https://jira.example.com/secure/useravatar?size=small&ownerId=example.user%40example.com&avatarId=12345"
+    },
+    "issue": {
+      "self": "https://jira.example.com/rest/api/2/issue/12345",
+      "id": 12345,
+      "projectId": 808,
+      "key": "TUN-709",
+      "remainingEstimateSeconds": 12345,
+      "issueType": {
+        "name": "Task",
+        "iconUrl": "https://jira.example.com/secure/viewavatar?size=xsmall&avatarId=12345&avatarType=issuetype"
+      },
+      "summary": "automated lorem ipsum a b c"
+    },
+    "worklogAttributes": [],
+    "workAttributeValues": []
+  }
+]
