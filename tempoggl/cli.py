@@ -76,8 +76,7 @@ def parse_args() -> Namespace:
         '-y', '--yes', action='store_true', help='answer yes when prompted'
     )
     parser.add_argument(
-        '--from',
-        dest='from_date',
+        'from_date',
         type=parse_date,
         help='sync all entries from this date',
         metavar='YYYY-MM-DD',

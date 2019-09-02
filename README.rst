@@ -1,21 +1,24 @@
 Tempoggl
 ========
 
-Tool for semi-automatic syncing of Jira Tempo entries into Toggl.
+Tool for syncing of Jira Tempo entries into Toggl.
 
 ::
 
-  usage: tempoggl [-h] [--username USERNAME] [-y] [--from YYYY-MM-DD] [-v]
-                  [-j JIRA_URL] [-t TOGGL_TOKEN] [-m [KEY=ID [KEY=ID ...]]]
+  usage: tempoggl [-h] [--username USERNAME] [-y] [-v] [-j JIRA_URL]
+                  [-t TOGGL_TOKEN] [-m [KEY=ID [KEY=ID ...]]]
+                  YYYY-MM-DD
 
   Sync time tracking entries from Jira Tempo app into Toggl. Prompt before
   pushing any changes.
+
+  positional arguments:
+    YYYY-MM-DD            sync all entries from this date
 
   optional arguments:
     -h, --help            show this help message and exit
     --username USERNAME   jira username
     -y, --yes             answer yes when prompted
-    --from YYYY-MM-DD     sync all entries from this date
     -v, --verbose         print more information
     -j JIRA_URL, --jira-url JIRA_URL
                           root url for jira e.g. https://jira.example.com
@@ -29,20 +32,26 @@ Tool for semi-automatic syncing of Jira Tempo entries into Toggl.
 Installation
 ------------
 
-``$ pip3 install https://github.com/je-l/tempoggl``
+``$ pip3 install git+https://github.com/je-l/tempoggl``
 
 Usage
 -----
 
-* ``$ tempoggl today``
-* ``$ tempoggl week``
-* ``$ tempoggl YYYY-MM-DD``
+If tempoggl.cfg is sufficiently filled, sync all entries starting from
+2019-03-09:
+
+``$ tempoggl 2019-03-09``
 
 
 Configuration
 -------------
 
 By default the config file is created at ``~/.config/tempoggl/tempoggl.cfg``
+
+Jira project key is the capitalized project identifier which is prefixed for
+all Jira issues. Toggl project id can be found from
+https://toggl.com/app/projects. Open a project and inspect the URL:
+https://toggl.com/app/projects/.../edit/<project_id>
 
 ::
 
@@ -51,5 +60,5 @@ By default the config file is created at ``~/.config/tempoggl/tempoggl.cfg``
   jira_url: https://jira.example.com
 
   [toggl_mapping]
-  jira project key to toggl project id
+  # jira project key to toggl project id
   PROJ: 123456
