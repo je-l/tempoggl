@@ -2,6 +2,7 @@
 """
 
 from typing import Iterator, List, Sequence, Optional, Any
+import sys
 from datetime import datetime, timedelta
 import traceback
 import json
@@ -87,6 +88,11 @@ class DateTimeEncoder(JSONEncoder):
 def fetch_projects(api_token: str) -> Iterator[TogglProject]:
     auth = (api_token, 'api_token')
     res = requests.get('https://www.toggl.com/api/v8/workspaces', auth=auth)
+
+    if res.status_code == 403:
+        logger.critical('invalid toggl token')
+        sys.exit(1)
+
     res.raise_for_status()
 
     workspaces = [Workspace.parse_obj(i) for i in json.loads(res.text)]

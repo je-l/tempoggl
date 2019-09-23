@@ -3,7 +3,7 @@ import sys
 from setuptools import setup, find_packages
 
 
-VERSION = '1.0.0'
+VERSION = '1.1.0'
 
 if sys.version_info < (3, 6):
     sys.exit('Tempoggl requires python 3.6+')
