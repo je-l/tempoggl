@@ -8,3 +8,7 @@ flake8-docstrings
 black
 pytest
 pytest-cov
+mypy
+
+# version conflict workaround
+dataclasses==0.6
