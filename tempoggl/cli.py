@@ -29,7 +29,7 @@ from tempoggl.tempo import (
     JiraProject,
 )
 from tempoggl.config import create_or_read_config, AppConfig, FileConfig
-from tempoggl.util import unreachable
+from tempoggl.typing_tools import unreachable
 
 
 logger = logging.getLogger(__name__)
