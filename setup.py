@@ -21,7 +21,5 @@ setup(
         'python-dateutil < 3.0.0, >= 2.0',
         'tzlocal < 3.0.0, >= 2.0.0',
     ],
-    entry_points={
-        'console_scripts': ['tempoggl = tempoggl.__main__:run']
-    },
+    entry_points={'console_scripts': ['tempoggl = tempoggl.__main__:run']},
 )

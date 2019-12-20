@@ -42,7 +42,6 @@ If tempoggl.cfg is sufficiently filled, sync all entries starting from
 
 ``$ tempoggl 2019-03-09``
 
-
 Configuration
 -------------
 
@@ -62,3 +61,12 @@ https://toggl.com/app/projects/.../edit/<project_id>
   [toggl_mapping]
   # jira project key to toggl project id
   PROJ: 123456
+
+Development
+-----------
+
+* create venv
+
+* pip install -r requirements-dev.txt
+
+* see Makefile for development commands
