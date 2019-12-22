@@ -1,0 +1,13 @@
+name: Tests, linter, mypy
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Build and run test container
+      run: docker build -t tempoggl . && docker run tempoggl
