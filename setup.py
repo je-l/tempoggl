@@ -3,15 +3,12 @@ import sys
 from setuptools import setup, find_packages
 
 
-VERSION = '1.1.0'
-
 if sys.version_info < (3, 6):
     sys.exit('Tempoggl requires python 3.6+')
 
 
 setup(
     name='Tempoggl',
-    version=VERSION,
     url='https://github.com/je-l/tempoggl',
     packages=find_packages('.'),
     install_requires=[
@@ -21,5 +18,7 @@ setup(
         'python-dateutil < 3.0.0, >= 2.0',
         'tzlocal < 3.0.0, >= 2.0.0',
     ],
+    use_scm_version=True,
+    setup_requires=['setuptools_scm'],
     entry_points={'console_scripts': ['tempoggl = tempoggl.__main__:run']},
 )

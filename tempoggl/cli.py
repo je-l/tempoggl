@@ -7,6 +7,7 @@ from getpass import getpass
 from distutils.util import strtobool
 from urllib.parse import urlparse
 import logging
+from pkg_resources import get_distribution
 import json
 
 import requests
@@ -104,6 +105,12 @@ def parse_args() -> Namespace:
         type=jira_toggl_pair,
         help='map jira project key to toggl project id. For example '
         '"--toggl-mapping PROJ=456 ABCD=5432 MISC=9876"',
+    )
+    parser.add_argument(
+        '-V',
+        '--version',
+        action='version',
+        version=get_distribution('tempoggl').version,
     )
 
     return parser.parse_args()
