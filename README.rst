@@ -6,7 +6,7 @@ Tool for syncing of Jira Tempo entries into Toggl.
 ::
 
   usage: tempoggl [-h] [--username USERNAME] [-y] [-v] [-j JIRA_URL]
-                  [-t TOGGL_TOKEN] [-m [KEY=ID [KEY=ID ...]]]
+                  [-t TOGGL_TOKEN] [-m [KEY=ID [KEY=ID ...]]] [-V]
                   YYYY-MM-DD
 
   Sync time tracking entries from Jira Tempo app into Toggl. Prompt before
@@ -27,6 +27,7 @@ Tool for syncing of Jira Tempo entries into Toggl.
     -m [KEY=ID [KEY=ID ...]], --toggl-mapping [KEY=ID [KEY=ID ...]]
                           map jira project key to toggl project id. For example
                           "--toggl-mapping PROJ=456 ABCD=5432 MISC=9876"
+    -V, --version         show program's version number and exit
 
 
 Installation
