@@ -9,5 +9,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Build and run test container
-      run: docker build -t tempoggl . && docker run tempoggl
+
+    - name: Build test container
+      run: docker build -t tempoggl .
+
+    - name: Run all checks
+      run: docker run tempoggl

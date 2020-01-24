@@ -1,6 +1,6 @@
-FROM python:3.8-alpine
+FROM python:3.8-slim-buster
 
-RUN apk add --no-cache gcc musl-dev make
+RUN apt-get update && apt-get install -y make
 
 ENV APP=/tempoggl
 
