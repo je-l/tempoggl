@@ -6,7 +6,7 @@ import logging
 from textwrap import dedent
 from datetime import date
 
-from pydantic import BaseModel, UrlStr, ValidationError
+from pydantic import BaseModel, HttpUrl, ValidationError
 from pydantic.dataclasses import dataclass
 
 
@@ -30,7 +30,7 @@ CONFIG_FILENAME = 'tempoggl.cfg'
 @dataclass
 class GeneralConfig:
     username: Optional[str] = None
-    jira_url: Optional[UrlStr] = None
+    jira_url: Optional[HttpUrl] = None
     yes: Optional[bool] = None
     from_date: Optional[date] = None
     verbose: Optional[bool] = None
@@ -102,7 +102,7 @@ class AppConfig(BaseModel):
     """CLI config and arg config combined."""
 
     username: str
-    jira_url: UrlStr
+    jira_url: HttpUrl
     yes: bool
     from_date: date
     verbose: bool
