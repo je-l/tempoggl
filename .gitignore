@@ -5,3 +5,5 @@
 *.pyc
 /htmlcov
 /dist
+/build
+/.eggs
