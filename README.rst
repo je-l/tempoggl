@@ -33,7 +33,7 @@ Tool for syncing of Jira Tempo entries into Toggl.
 Installation
 ------------
 
-``$ pip3 install git+https://github.com/je-l/tempoggl``
+``$ pip3 install tempoggl``
 
 Usage
 -----
