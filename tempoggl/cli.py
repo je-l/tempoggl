@@ -127,9 +127,9 @@ def validate_configs(
         app_config = AppConfig(
             username=args.username or config.general.username,
             jira_url=args.jira_url or config.general.jira_url,
-            yes=args.yes or config.general.yes,
+            yes=bool(args.yes or config.general.yes),
             from_date=args.from_date or config.general.from_date,
-            verbose=args.verbose or config.general.verbose,
+            verbose=bool(args.verbose or config.general.verbose),
             jira_to_toggl=(
                 {**config.toggl_mapping, **(dict(args.toggl_mapping))}
             ),
