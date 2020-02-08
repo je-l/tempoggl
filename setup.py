@@ -17,6 +17,7 @@ setup(
         'requests < 3.0.0, >= 2.21.0',
         'python-dateutil < 3.0.0, >= 2.0',
         'tzlocal < 3.0.0, >= 2.0.0',
+        'importlib_metadata < 2.0.0, >= 1.5.0',
     ],
     use_scm_version=True,
     setup_requires=['setuptools_scm'],

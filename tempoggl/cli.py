@@ -7,9 +7,9 @@ from getpass import getpass
 from distutils.util import strtobool
 from urllib.parse import urlparse
 import logging
-from pkg_resources import get_distribution
 import json
 
+from importlib_metadata import version
 import requests
 from dateutil.parser import parse as dateutil_parse
 from pydantic import ValidationError
@@ -106,11 +106,9 @@ def parse_args() -> Namespace:
         help='map jira project key to toggl project id. For example '
         '"--toggl-mapping PROJ=456 ABCD=5432 MISC=9876"',
     )
+
     parser.add_argument(
-        '-V',
-        '--version',
-        action='version',
-        version=get_distribution('tempoggl').version,
+        '-V', '--version', action='version', version=version('tempoggl'),
     )
 
     return parser.parse_args()

@@ -141,6 +141,7 @@ def push_worklogs(
         try:
             response.raise_for_status()
         except HTTPError as err:
+            assert isinstance(err.response.text, str)
             return err.response.text
         except RequestException:
             return traceback.format_exc()
