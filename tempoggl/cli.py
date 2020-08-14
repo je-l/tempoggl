@@ -174,6 +174,8 @@ def start_syncing(config: AppConfig, jira_password: str) -> None:
         auth=auth,
     )
 
+    tempo_response.raise_for_status()
+
     toggl_projects = list(fetch_projects(config.toggl_token))
 
     worklog_resposes = [
